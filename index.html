@@ -1,0 +1,1597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meric Altug Gemalmaz</title>
+<link rel="icon" href="https://gemalmaz.org/favicon.ico">
+<link href="https://gemalmaz.org/favicon.ico" rel="shortcut icon">
+<link rel="apple-touch-icon" sizes="180x180" href="https://gemalmaz.org/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://gemalmaz.org/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://gemalmaz.org/favicon-16x16.png">
+<link rel="manifest" href="https://gemalmaz.org/site.webmanifest">
+<link rel="mask-icon" href="https://gemalmaz.org/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#ffffff">
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+<style>
+
+* {
+  box-sizing: border-box; /* Include padding and borders in the width and height */
+}
+
+body
+{
+  background-color: #f7f7f7;
+}
+
+  body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  header {
+  background: #D2B48C;
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  font-size: 20px;
+  /* Removed margin-left and width from the base style */
+  box-sizing: border-box;
+  border: 1px solid #6a6c6b;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+.container {
+  display: flex;
+  min-height: calc(100vh - 40px); /* Adjusted for header height */
+  /* padding-top: 60px; Remove this line */
+}
+  .left-side {
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 25%;
+  background-color: #f7f7f7;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* This will vertically center the content */
+  align-items: center; /* This will horizontally center the content */
+  overflow-y: auto;
+  z-index: 1;
+  min-width: 300px;
+  min-height: 1000px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); /* Adjust values as needed */
+}
+
+ .right-side {
+  margin-left: 25%; /* Left margin equal to the width of the left side */
+  flex-grow: 1;
+  background-color: #f8f7f2;
+  padding: 20px;
+  margin-left: 0px;
+  overflow-y: auto; /* Add scroll to the right side if content overflows */
+  width: calc(75% - 40px); /* Adjust width for padding */
+  box-sizing: border-box; /* Ensure padding is included in the width calculation */
+  border-left: 1px solid rgb(170, 170, 170);
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2); /* Adjust values as needed */
+}
+
+
+.right-side > * {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+
+.profile-pic {
+  width: 250px; /* Size of the circle */
+  height: 250px; /* Size of the circle */
+  border-radius: 50%; /* Makes it circular */
+  overflow: hidden; /* Ensures no spillover from the image */
+  display: flex; /* Ensures that the child img is centered if needed */
+  justify-content: center; /* Centers the child img horizontally */
+  align-items: center; /* Centers the child img vertically */
+  margin-bottom: 20px;
+  border: 5px solid #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.profile-pic img {
+  width: 100%; /* Scale the image to fill the container */
+  height: 100%; /* Scale the image to fill the container */
+  object-fit: cover; /* Cover the container with the image */
+}
+
+  .title {
+    font-size: 28px;
+    color: #333;
+    margin-top: 20px; /* Add space above the title */
+    margin-bottom: 5px;
+  }
+  .subtitle {
+    font-size: 22px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  .section-header {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  .cv-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align the items horizontally */
+  justify-content: center; /* Center align the items vertically */
+  margin-top: 20px; /* Adjust as needed */
+}
+
+.text_Reg
+  {
+    font-size: 20px !important;
+  }
+
+
+
+  #cv-right {
+    display: flex; /* Show duplicate CV in right-side */
+    margin-top: auto; /* Push CV to bottom */
+    /* ... other styles ... */
+  }
+
+.cv-icon {
+  width: 90px; /* Adjust if necessary */
+  height: auto;
+  margin-bottom: 10px; /* Space between icon and text */
+  cursor: pointer;
+}
+
+.cv-info {
+  text-align: center; /* Center the text */
+  font-size: 14px; /* Adjust if necessary */
+  color: #000000;
+  margin-top: 5px; /* Space between "Curriculum Vitae" and "Last Updated" text */
+  line-height: 1.4; /* Adjust the line height for better readability */
+}
+
+.about-me {
+  margin-bottom: 30px; /* Spacing between sections */
+}
+
+.about-me .section-header {
+  margin-bottom: 15px; /* Spacing between the header and text */
+}
+
+.about-me p {
+  margin-bottom: 10px; /* Spacing between paragraphs */
+  line-height: 1.6; /* Improved readability for the text */
+  text-align: left; /* Justify the text for a cleaner look */
+  font-size: 18px; /* Adjust the font size if necessary */
+}
+
+@media (max-width: 1750px) {
+  .subtitle {
+    font-size: 20px; /* Smaller width for tighter spaces */
+  }
+  .title {
+    font-size: 24px; /* Smaller width for tighter spaces */
+  }
+}
+
+@media (max-width: 1540px) {
+  .subtitle {
+    font-size: 16px; /* Smaller width for tighter spaces */
+  }
+
+  #footnote_cv
+  {
+    font-size: 15px !important;
+  }
+  .cv-info1
+  {
+    font-size: 20px !important;
+  }
+}
+
+@media (max-height: 880px) {
+  #firstMap {
+    display: none !important; /* Smaller width for tighter spaces */
+  }
+}
+
+@media (min-width: 1200px) {
+  /* Styles that affect the layout on desktop or larger screens */
+  .container {
+    display: flex;
+    flex-wrap: nowrap; /* Prevents the container from wrapping */
+  }
+  header {
+    padding: 20px;
+    flex-grow: 1; /* Allows the header to grow and fill the available space */
+    color: #ffffff;
+    text-align: center;
+    font-size: 24px;
+    margin-left: 25%;
+  }
+  .left-side {
+    position: fixed;
+    width: 25%;
+    /* ... other styles ... */
+  }
+  .right-side {
+    padding-top: 60px;
+    margin-left: 25%; /* This ensures there is space for the fixed .left-side */
+    width: 75%; /* This will make the .right-side take the remaining space */
+    padding: 20px 20px 20px 20px; /* Adjusted padding */
+    /* ... other styles ... */
+  }
+
+  /* Large screens */
+  #cv-left {
+    display: flex; /* Show CV in left-side */
+  }
+  #cv-right {
+    display: none; /* Hide duplicate CV in right-side */
+  }
+  #cv-right-new {
+    display: none; /* Show duplicate CV in right-side */
+  }
+}
+
+@media (max-height: 750px){
+    .container {
+      flex-direction: column;
+      padding-top: 0;
+      min-height: 100vh;
+    }
+    .left-side {
+      position: static; /* Reset position for mobile */
+      width: auto; /* Full width on mobile */
+      height: auto;
+      order: -1; /* Make the left side go above */
+      z-index: auto; /* Reset z-index */
+      min-width: 0px;
+  min-height: 0px;
+    }
+
+    .title {
+    font-size: 22px;
+
+  }
+
+  .subtitle {
+    font-size: 20px; /* Smaller width for tighter spaces */
+  }
+  .section-header
+  {
+    font-size: 18px;
+  }
+
+
+    .right-side {
+
+      padding-top: 60px;
+      margin-left: 0; /* Reset left margin for mobile */
+      padding: 20px;
+      width: auto; /* Full width on mobile */
+      display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Push content to top and bottom */
+    min-height: 100vh;
+    border-left: none;
+    border-top: 1px solid rgb(56, 56, 56);
+    }
+    .profile-pic {
+      width: 200px; /* Adjusted size for mobile */
+      height: 200px; /* Adjusted size for mobile */
+    }
+    .cv-icon {
+      margin-top: 10px;
+    }
+
+    #cv-left {
+    display: none !important; /* Hide CV in left-side */
+  }
+  #cv-right {
+    display: flex !important; /* Show duplicate CV in right-side */
+    flex-direction: column;
+    align-items: center; /* Center the content horizontally */
+    justify-content: center; /* Center the content vertically */
+    margin-top: auto; /* Pushes it to the bottom */
+    padding: 10px; /* Inner spacing if needed */
+    width: 100%; /* Full width */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    text-align: center; /* Center align the text if it's not already centered */
+
+  }
+
+  #cv-right-new {
+    display: flex !important; /* Show duplicate CV in right-side */
+  }
+
+  .cv-info
+  {
+    color: #000000;
+  }
+
+    header {
+    font-size: 16px;
+    margin-left: 0px;
+  }
+
+  .text_Reg
+  {
+    font-size: 17px !important;
+  }
+
+  }
+
+
+  @media (max-width: 1200px) {
+    .download-button {
+
+  font-size: 12px !important; /* Smaller font size for a small button */
+}
+    .container {
+      flex-direction: column;
+      padding-top: 0;
+      min-height: 100vh;
+    }
+    .left-side {
+      position: static; /* Reset position for mobile */
+      width: auto; /* Full width on mobile */
+      height: auto;
+      order: -1; /* Make the left side go above */
+      z-index: auto; /* Reset z-index */
+      min-width: 0px;
+  min-height: 0px;
+    }
+
+    .title {
+    font-size: 22px;
+
+  }
+
+  .subtitle {
+    font-size: 20px; /* Smaller width for tighter spaces */
+  }
+  .section-header
+  {
+    font-size: 18px;
+  }
+
+
+    .right-side {
+
+      padding-top: 60px;
+      margin-left: 0; /* Reset left margin for mobile */
+      padding: 20px;
+      width: auto; /* Full width on mobile */
+      display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Push content to top and bottom */
+    min-height: 100vh;
+    border-left: none;
+    border-top: 1px solid rgb(56, 56, 56);
+    }
+    .profile-pic {
+      width: 200px; /* Adjusted size for mobile */
+      height: 200px; /* Adjusted size for mobile */
+    }
+    .cv-icon {
+      margin-top: 10px;
+    }
+
+    #cv-left {
+    display: none !important; /* Hide CV in left-side */
+  }
+  #cv-right {
+    display: flex !important; /* Show duplicate CV in right-side */
+    flex-direction: column;
+    align-items: center; /* Center the content horizontally */
+    justify-content: center; /* Center the content vertically */
+    margin-top: auto; /* Pushes it to the bottom */
+    padding: 10px; /* Inner spacing if needed */
+    width: 100%; /* Full width */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    text-align: center; /* Center align the text if it's not already centered */
+
+  }
+
+  #cv-right-new {
+    display: flex !important; /* Show duplicate CV in right-side */
+  }
+
+  .cv-info
+  {
+    color: #000000;
+  }
+
+    header {
+    font-size: 16px;
+    margin-left: 0px;
+  }
+
+  .text_Reg
+  {
+    font-size: 17px !important;
+  }
+  .publication-text {
+  font-size: 15px !important;
+}
+
+#AIES_IMAGE
+  {
+    width: 100px !important;
+    height: 80px !important;
+  }
+
+  #IJCAI_IMAGE
+  {
+    width: 100px !important;
+    height: 70px !important;
+  }
+
+  }
+
+
+
+h1
+{
+ font-size: 30px;
+}
+
+/* Overall theme styling */
+body {
+  font-family: 'Arial', sans-serif; /* This should match your overall theme's font */
+  color: #333; /* Standard text color, adjust as needed */
+}
+
+/* Publications section styling */
+.publications {
+  background-color: #f9f9f9; /* Light grey background for the section */
+  padding: 20px;
+  border-radius: 10px; /* Rounded corners for the publication cards */
+}
+
+.publication-entry {
+  display: flex;
+  align-items: center;
+  padding-bottom: 30px;
+  padding-top: 10px;
+  background-color: #fbfbfb; /* White background for each entry */
+  border-radius: 10px; /* Rounded corners for the entries */
+  margin-bottom: 15px; /* Spacing between entries */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: all 0.3s ease-in-out; /* Smooth transition for all animatable properties */
+  min-width: 320px;
+}
+
+/* Correct class name for publication image styling */
+.paper-img {
+  width: 120px; /* Smaller width for the image */
+  height: 100px; /* Smaller height for the image */
+  border-radius: 30%; /* Makes it circular */
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.paper-img img {
+  width: 100%;
+  height: auto;
+  display: block; /* Ensures the image does not inline */
+}
+
+
+
+/* Correct class name for publication image styling */
+.inner_img {
+  width: 150px; /* Smaller width for the image */
+  height: 150px; /* Smaller height for the image */
+
+  /* Ensures no spillover from the image */
+  margin-right: -20px;
+
+}
+
+.inner_img img {
+  width: 100%;
+  height: auto;
+  display: block; /* Ensures the image does not inline */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 30%;
+}
+
+/* Publication text styling */
+.publication-text {
+  flex-grow: 1; /* Allows the text section to fill the remaining space */
+  padding-left: 20px;
+  font-size: 20px;
+}
+
+/* Publication title link styling */
+.publication-title a {
+  color: #333; /* Dark grey color, same as body for consistency */
+  text-decoration: none; /* Removes underline */
+  transition: color 0.2s ease-in-out; /* Smooth color transition for hover effect */
+}
+
+.publication-title a:hover {
+  color: #1a75ff; /* Change this color to match your theme's accent color */
+}
+
+
+
+@media (max-width: 768px) {
+  .paper-img {
+    width: auto; /* Keep the original width */
+    height: auto; /* Keep the original height */
+    min-width: 80px; /* Minimum width of the image */
+    min-height: 80px; /* Minimum height of the image, adjust as needed to maintain the aspect ratio */
+    flex-shrink: 0; /* Prevents the image from shrinking */
+  }
+
+  .publication-entry {
+    flex-direction: row; /* Side by side for image and text */
+    align-items: center;
+  }
+
+  .publication-text {
+    margin-left: 15px; /* Adjust the margin to create space between image and text */
+  }
+  .inner_img img {
+  max-width: 90%; /* or any other percentage value */
+  height: auto;
+  display: block; /* Ensures the image does not inline */
+}
+  .inner_img img {
+    min-width: 60px; /* This will be the minimum width of images on small screens */
+    height: auto;
+  }
+
+  /* For the text */
+.publication-text {
+  font-size: 13px; /* reduce from 15px to 14px for a slightly smaller text */
+}
+
+.download-button
+{
+  padding: 2px 6px !important;
+  font-size: 12px !important; /* Smaller font size for a small button */
+  font-weight: 900 !important;
+}
+
+.publication-entry {
+  padding-bottom: 10px ;
+  padding-top: 0px ;
+  padding-left: 10px ;
+  padding-right: 10px;
+}
+
+/* #AIES_IMAGE
+  {
+    width: 90px !important;
+    height: 70px !important;
+  }
+
+  #IJCAI_IMAGE
+  {
+    width: 90px !important;
+    height: 60px !important;
+  } */
+
+
+
+}
+
+.custom-divider {
+  display: block !important;
+  border: none !important;
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
+  width: 100%;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, transparent, #afb3b0, transparent);
+}
+
+
+.fancy-copyright {
+    font-size: 12px; /* Adjust font size for readability */
+    font-weight: bold;
+    color: #181818; /* Darken the text color for better contrast */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Arial', sans-serif;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Reduce shadow intensity */
+    padding: 5px 10px; /* Increase padding for better spacing */
+    border: 1px solid #999; /* Darken the border color */
+    border-radius: 5px;
+}
+
+
+.text_Reg a {
+        color: #C28E0F; /* Change this to the color you want for your links */
+        text-decoration: none; /* Removes default underline */
+        border-bottom: 1px dotted #C28E0F; /* Dotted bottom border to simulate underline */
+        padding-bottom: 2px; /* Adjusts space between text and underline */
+        transition: color 0.3s ease, border-color 0.3s ease; /* Smooth transition for hover effect */
+    }
+
+    .text_Reg a:hover,
+    .text_Reg a:focus { /* Also add focus for keyboard navigation */
+        color: #1a75ff; /* Color on hover */
+        border-bottom: 1px solid #1a75ff; /* Solid bottom border on hover */
+    }
+
+    .clickable-container {
+    cursor: pointer; /* Change cursor to indicate the container is clickable */
+    /* Add any other styling here (e.g., padding, background color) */
+    display: inline-block; /* This makes the div behave like an inline element */
+}
+
+/* Ensure the image fits within the container */
+.clickable-container img {
+    width: 100%; /* Adjust this as needed */
+    height: auto; /* Adjust this as needed */
+}
+
+#visitDetailsContainer {
+    display: inline-block;
+    text-align: center;
+}
+
+#visitDetailsContainer img {
+    display: block;
+    margin: 0 auto;
+    width: 100px; /* Adjust if you want the image larger */
+    height: auto;
+}
+
+#visitDetailsLink {
+    display: inline-block;
+    padding: 15px; /* Increased padding for a larger clickable area */
+    text-decoration: underline; /* Underline always visible */
+    text-decoration-color: #000000; /* Underline color matches the text color */
+    text-decoration-thickness: 1px; /* Thinner underline */
+    text-decoration-style: solid; /* Solid underline style */
+    text-underline-offset: 3px; /* Distance of the underline from the text */
+    color: #000000; /* Original color */
+    border-radius: 5px;
+    transition: color 0.3s ease-in-out, text-decoration-color 0.3s ease-in-out, text-decoration-thickness 0.3s ease-in-out; /* Smooth transition for color, underline color, and thickness */
+    font-size: 16px; /* Larger font size for the link content */
+}
+
+#visitDetailsLink p {
+    margin: 0;
+    font-size: 14px; /* Adjusted font size for the paragraph specifically */
+}
+
+#visitDetailsLink:hover, #cv-info {
+    color: #0056b3; /* New color on hover */
+    text-decoration: none; /* Underline disappears on hover */
+}
+
+
+.container1 {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap as needed */
+    justify-content: space-between; /* Distributes space between items */
+    align-items: flex-start; /* Aligns items at the start of the container */
+}
+
+#element1, #element2 {
+    display: inline-flex; /* Makes the divs flex containers themselves, aligning their children inline */
+    flex-direction: column; /* Stacks the children of the elements vertically */
+    justify-content: center; /* Center the items vertically */
+    align-items: center; /* Center the items horizontally */
+    flex: 1; /* Allows each element to grow and share available space */
+    margin: 0 10px; /* Adds margin to the left and right for spacing */
+}
+
+.cv-icon, #visitDetailsContainer img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 5px; /* Adds a little space below the image */
+}
+
+.cv-info, #visitDetailsLink {
+    text-align: center; /* Center the text within the flex items */
+}
+
+/* Add any additional styling you need here */
+
+/* This is to ensure the copyright text is always at the bottom and centered */
+.fancy-copyright {
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+    background-color: #D2B48C;
+    border-color: #666;
+     /* Adjust values as needed */
+}
+
+
+.cv-info1 {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  color: #666; /* Default text color */
+
+}
+
+.cv-info1:hover {
+  color: #0056b3; /* Text color on hover */
+
+}
+
+
+#element1, #element2 {
+    display: inline-flex; /* Keeps the inner flex layout */
+    flex-direction: column; /* Keeps the children stacked vertically */
+    justify-content: center; /* Centers the items vertically */
+    align-items: center; /* Centers the items horizontally */
+
+    margin: 0 10px; /* Adds margin for spacing */
+}
+
+/* Responsive behavior for smaller screens */
+@media (max-width: 450px) {
+    #element1
+    {
+      width: 150px !important;
+    }
+
+    #element2, #visitDetailsContainer
+    {
+      width: 150px !important;
+    }
+
+    #visitDetailsContainer img
+    {
+      width: 100px !important;
+      height: 60px !important;
+    }
+
+    .cv-icon
+    {
+      width: 40px !important;
+      height: 40px !important;
+      margin-bottom: 10px;
+    }
+
+    .cv-text
+    {
+      font-size: 8px !important;
+    }
+
+    .cv-text-big
+    {
+      font-size: 10px !important;
+    }
+    .cv-info
+    {
+      margin-top: -10px !important;
+    }
+}
+
+
+@media (max-width: 370px) {
+  .container1 {
+        flex-direction: column;
+      }
+
+      #element1, #element2 {
+        width: auto; /* Takes the full width of the container */
+        margin: 10px 0; /* Adjusts margin for vertical stacking */
+      }
+      .fancy-copyright
+      {
+        font-size: 10px;
+      }
+}
+
+@media (max-width: 520px) {
+  .download-button
+{
+  padding: 0px 6px !important;
+  font-size: 10px !important; /* Smaller font size for a small button */
+}
+.buttons
+{
+  padding-top: 0px !important;
+}
+}
+
+/* Responsive behavior for smaller screens */
+
+
+
+@media (min-width: 768px) {
+  .publication-entry, .paper-img {
+    /* Prevent resizing by specifying fixed dimensions or using min-width/min-height */
+    flex-shrink: 0;
+  }
+
+}
+
+
+.download-button {
+  display: inline-block;
+  background-color: #717e8f; /* Blue background color */
+  color: white;
+  padding: 4px 10px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 16px; /* Smaller font size for a small button */
+  text-align: center;
+  text-decoration: none; /* This removes the underline from the link */
+  transition: background-color 0.3s ease; /* Smooth transition for the background color change */
+  font-weight: bold;
+}
+
+.download-button:hover {
+  background-color: #007bff; /* Green background color on hover */
+}
+
+.cv-icon {
+  background-image: url('https://mgemalma.github.io/mgemalma/Assets/cv_icon.png');
+  background-size: cover; /* This ensures that the background image covers the whole area of the container */
+  transition: background-image 0.5s ease; /* Optional: adds a transition effect when changing images */
+}
+
+.cv-icon:hover {
+  background-image: url('https://mgemalma.github.io/mgemalma/Assets/cv_icon_1.png');
+}
+
+.visitorsBox {
+  transition: opacity 0.1s ease-in-out; /* Smooth transition for opacity */
+  opacity: 1; /* Start fully visible */
+}
+
+.darkmode-layer, .darkmode-toggle {
+  z-index: 500;
+}
+
+.delayed-mix-blend {
+  mix-blend-mode: difference;
+}
+
+.emphasize span {
+  color: #000000; /* Text color */
+}
+
+.emphasize {
+  background-color: #c28f0e3b; /* Your chosen background color */
+  font-weight: bold; /* Ensures bold text */
+  border-radius: 4px; /* Rounded corners */
+  padding: 0.1em;
+}
+
+.hover-underline {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.hover-underline:hover {
+    text-decoration: underline;
+  }
+
+  .cv-btn {
+    font-size: 16px;
+    padding: 8px 15px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+    transition: background-color 0.3s ease;
+}
+
+.cv-btn-cv {
+    background-color: #3DB2FF;
+}
+
+.cv-btn-resume {
+    background-color: #4CAF50;
+}
+
+.cv-btn-cv {
+        transition: background-color 0.3s ease;
+    }
+    .cv-btn-cv:hover {
+        background-color: DeepSkyBlue; /* Light teal/cyan color */
+        color: white;
+    }
+
+    .cv-btn-resume {
+            transition: background-color 0.3s ease;
+        }
+        .cv-btn-resume:hover {
+            background-color: #53c157; /* Light teal/cyan color */
+            color: white;
+        }
+
+@media (max-width: 768px) {
+    .cv-btn {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+}
+
+@media (max-width: 520px) {
+    .cv-btn {
+        font-size: 12px;
+        padding: 4px 10px;
+    }
+}
+.cv-info1 {
+    font-size: 24px;
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease; /* Smooth transition */
+  }
+
+  .cv-info1:hover {
+    color: #1a75ff; /* Hover color */
+  }
+
+</style>
+</head>
+<body>
+  <header class="dontInvert" id="headerTop" style="display: flex; justify-content: space-between; align-items: center; padding: 5px 10px; text-align: center;">
+    <!-- Left-aligned email section -->
+    <div style="display: flex; align-items: center;">
+      <a href="mailto:mgemalma@purdue.edu" style="margin-right: 10px;">
+        <img src="https://mgemalma.github.io/mgemalma/Assets/envelope.png" style="height: 30px; width: 40px;" alt="Contact Me!">
+      </a>
+      <a class="hover-underline" href="mailto:mgemalma@purdue.edu" style="font-weight: bold; font-size: 12px; color: #000000;">
+        mgemalma@purdue.edu
+      </a>
+    </div>
+    
+    <!-- Right-aligned icons section -->
+    <div style="display: flex; align-items: center;">
+      <a href="https://www.linkedin.com/in/meric-altug-gemalmaz-647973149/" target="_blank" style="margin: 0 10px;">
+        <img src="https://www.linkedin.com/favicon.ico" style="height: 30px; width: 30px;" alt="LinkedIn">
+      </a>
+      <a href="https://scholar.google.com/citations?user=hkOGu3YAAAAJ" target="_blank" style="margin: 0 10px;">
+        <img src="https://scholar.google.com/favicon.ico" style="height: 30px; width: 30px;" alt="Google Scholar">
+      </a>
+      <a href="https://github.com/mgemalma" target="_blank" style="margin: 0 10px;">
+        <img src="https://github.com/favicon.ico" style="height: 30px; width: 30px;" alt="GitHub">
+      </a>
+    </div>
+  </header>
+  
+
+
+
+
+
+<div class="container">
+  <div class="left-side">
+    <div class="profile-pic">
+      <img class="dontInvert" src="https://mgemalma.github.io/mgemalma/Assets/profile_picture.JPG" alt="Meric Altug Gemalmaz">
+    </div>
+    <h2 class="title">Meric Altug Gemalmaz</h2>
+    <p class="subtitle">PhD Candidate @ Purdue University</p>
+    <div id="cv-right-new" style="display: none; justify-content: center; gap: 20px; margin-bottom: 15px;">
+      <a href="https://mgemalma.github.io/mgemalma/CV/Meric_Altug_Gemalmaz_CV.pdf" class="cv-info1" target="_blank" style="font-size: 24px; text-decoration: none; display: flex; align-items: center;">
+        <i class="fas fa-file-alt" style="margin-right: 8px;"></i> CV
+      </a>
+      <a href="https://mgemalma.github.io/mgemalma/Resume/Meric_Altug_Gemalmaz_Resume.pdf" class="cv-info1" target="_blank" style="font-size: 24px; text-decoration: none; display: flex; align-items: center;">
+        <i class="fas fa-file" style="margin-right: 8px;"></i> Résumé
+      </a>
+    </div>
+    
+    <div class="cv-section" id="cv-left" style="margin-top: 0px;">
+        <!-- <a id="cv1" href="https://mgemalma.github.io/mgemalma/CV/Meric_Altug_Gemalmaz_CV.pdf" target="_blank"> -->
+          <!-- <img class="cv-icon" style="width: 115px;" src="https://mgemalma.github.io/mgemalma/Assets/cv_icon.png" alt="CV Icon"> -->
+          <!-- <div style="width: 115px; height: 115px;" class="cv-icon"></div> -->
+        <!-- </a> -->
+        <!-- Include Font Awesome CDN for Icons -->
+
+
+        <div id="cv2" class="cv-info" style="font-family: Arial, sans-serif; font-size: 20px; color: #666; text-align: center;">
+
+          <!-- Button for CV in mobile view -->
+    <div style="margin-bottom: 15px;">
+      <a href="https://mgemalma.github.io/mgemalma/CV/Meric_Altug_Gemalmaz_CV.pdf" class="cv-info1" target="_blank">
+        <button style="font-size: 18px; padding: 10px 20px;" class="cv-btn cv-btn-cv">
+          <i class="fas fa-file-alt"></i> Curriculum Vitae
+          <i class="fas fa-download"></i>
+        </button>
+      </a>
+    </div>
+
+    <!-- Button for Résumé in mobile view -->
+    <div style="margin-bottom: 15px;">
+      <a href="https://mgemalma.github.io/mgemalma/Resume/Meric_Altug_Gemalmaz_Resume.pdf" class="cv-info1" target="_blank">
+        <button style="font-size: 18px; padding: 10px 20px;" class="cv-btn cv-btn-resume">
+          <i class="fas fa-file"></i> Résumé
+          <i class="fas fa-download"></i>
+        </button>
+      </a>
+    </div>
+
+      </div>
+
+
+
+
+
+        <div id="visitDetailsContainer" style="margin-top: 50px; display:none">
+            <a id="visitDetailsLink" href="https://clustrmaps.com/site/1bz9i" title="Visit tracker" target="_blank" style="display: block; margin: 0 auto; cursor: pointer; text-decoration: none;">
+                <img id="firstMap" class="dontInvert" src="https://clustrmaps.com/map_v2.png?cl=ffffff&w=a&t=tt&d=nL-HVJLMlpqUfubT3FUj26AonS0xAPEZjn9O3Tf9pPE&co=9b9b9b" alt="Visit Tracker" style="width: 250px; height: auto; cursor: pointer;">
+            </a>
+        </div>
+
+
+
+
+    </div>
+  </div>
+  <div class="right-side">
+    <h2 class="section-header ab_hed">About Me</h2>
+    <div class="about-me">
+        <!-- <p class="text_Reg">I am a PhD candidate in the field of human-computer interaction and machine learning, advised by Assistant Professor Ming Yin. My research centers on leveraging crowd wisdom to enhance machine intelligence (i.e., crowdsourcing and social computing), with a particular focus on addressing issues of fairness and bias in AI.</p> -->
+
+        <!-- <p class="text_Reg">I am a PhD candidate in the <a href="https://www.cs.purdue.edu/" target="_blank">Department of Computer Science</a>, <a href="https://purdue.edu/" target="_blank">Purdue University</a>. My research interests are in the fields of human-computer interaction, human-AI interaction and applied artificial intelligence. Under the guidance of <a href="http://mingyin.org" target="_blank">Dr. Ming Yin</a>, I mostly focus on leveraging crowd wisdom to enhance artificial intelligence (AI), particularly in addressing challenges related to bias and fairness in AI. I am dedicated to increasing the comprehension of bias in AI systems, specifically addressing its potential origins and effects at various stages of the AI development pipeline. I am keen to participate in projects aimed at understanding, modeling, and mitigating these challenges. My work to date has provided a human-in-the-loop perspective in two key aspects: how people contribute their biases to AI-based decision systems and how these biases, in turn, impact them. This impact includes their perceptions of fairness in AI systems and their engagement with the technology. Through my research endeavors, I have had the privilege of publishing my work in esteemed venues such as <a href="https://ijcai-21.org/" target="_blank">IJCAI21</a>, <a href="https://www.aies-conference.com/2022/" target="_blank">AIES22</a>.</p> -->
+        <p class="text_Reg">I am a PhD candidate in the <a href="https://www.cs.purdue.edu/" target="_blank">Department of Computer Science</a> at <a href="https://purdue.edu/" target="_blank">Purdue University</a>, advised by <a href="http://mingyin.org" target="_blank">Dr. Ming Yin</a>. My research interests are in the fields of <b class="emphasize"><span>human-AI interaction</span></b>, <b class="emphasize"><span>applied AI</span></b>, and <b class="emphasize"><span>fairness</span></b>. Specifically, I focus on investigating fairness issues in the AI development pipeline from a human-in-the-loop perspective.</p>
+        <!-- <p class="text_Reg">Through my research, I aim to contribute to the development of more equitable and socially responsible AI systems. I seek to first understand the nature of bias in AI systems and then identify effective ways to address them.</p> -->
+        <!-- <p class="text_Reg" style="padding-top: 10px;">
+            In addition to my research, I have been recognized with several teaching awards for my role as a Graduate Teaching Assistant. One such honor is the <a href="https://www.cs.purdue.edu/graduate/gta-award-winners.html" target="_blank">Graduate Teaching Award</a>, received in Fall 2022, in supporting a graduate-level data mining class. Additionally, in 2020, I was awarded the prestigious <a href="https://www.cs.purdue.edu/news/articles/2020/2020-cs-awards.html" target="_blank">Raymond Boyce Graduate Teacher Award</a> for my teaching assistance to an undergraduate-level computer architecture class.
+          </p> -->
+          <p class="text_Reg" style="padding-top: 10px;"> Before attending graduate school, I received my bachelor's degree from <a href="https://purdue.edu/" target="_blank">Purdue University</a>, <a href="https://www.cs.purdue.edu/" target="_blank">Department of Computer Science</a> with distinction in December 2018.</p>
+        </div>
+      <hr class="custom-divider">
+
+
+
+    <h2 id="news_header" class="section-header">News</h2>
+    <div id="news_list" class="News">
+        <ul >
+          <!-- <li class="text_Reg" style="margin-bottom: 20px; line-height: 1.5;"><b>April 2024</b>: For the academic year 2024-2025, <b class="emphasize"><span>I have been awarded the Teaching Fellowship</span></b> under the guidance of Professors <a href="https://www.cs.purdue.edu/people/faculty/gba.html" target="_blank">George B. Adams, III</a>, and <a href="https://www.cs.purdue.edu/people/faculty/turkstra.html" target="_blank">Jeffrey Turkstra</a>. During this fellowship, I will co-teach <a href="https://selfservice.mypurdue.purdue.edu/prod/bwckctlg.p_disp_course_detail?cat_term_in=202020&subj_code_in=CS&crse_numb_in=24000" target="_blank">CS 24000</a> while receiving guidance from both faculty mentors.</li> -->
+            <li class="text_Reg" style="margin-bottom: 20px;"><b>January 2024</b>: I received special recognition for an exceptional review at <a href="https://chi2024.acm.org/" target="_blank">CHI 2024</a>. </li>
+            <li class="text_Reg" style="margin-bottom: 20px;"><b>November 2023</b>: I passed my preliminary exam and have achieved candidacy!</a> </li>
+            <li class="text_Reg" style="margin-bottom: 20px;"><b>November 2022</b>: I received <a href="https://www.cs.purdue.edu/graduate/gta-award-winners.html" target="_blank">the Graduate Teaching Award</a> for my performance in <a href="https://mingyin.org/CS573/Fall2023/index.html" target="_blank">CS 57300</a>! </li>
+            <li class="text_Reg" style="margin-bottom: 20px;"><b>April 2022</b>: Our paper "Understanding Decision Subjects' Fairness Perceptions and Retention in Repeated Interactions with AI-Based Decision Systems" has been accepted to AIES 2022! This work was done with <a href="http://mingyin.org" target="_blank">Dr. Ming Yin</a>. </li>
+            <li class="text_Reg" style="margin-bottom: 20px;"><b>May 2021</b>: Our paper "Accounting for Confirmation Bias in Crowdsourced Label Aggregation" has been accepted to IJCAI 2021! This work was done with <a href="http://mingyin.org" target="_blank">Dr. Ming Yin</a>. </li>
+            <li class="text_Reg" style="margin-bottom: 20px;"><b>March 2020</b>: I was awarded <a href="https://www.cs.purdue.edu/news/articles/2020/2020-cs-awards.html" target="_blank">the Raymond Boyce Graduate Teacher Award</a> for my performance in <a href="https://www.cs.purdue.edu/academic-programs/courses/canonical/cs250.html" target="_blank">CS 25000</a> of the Fall 2019 semester. </li>
+            <li class="text_Reg" style="margin-bottom: 20px;"><b>January 2020</b>: My petition to become a PhD student was approved by the faculty, and I have now officially become a PhD student! </li>
+            <!-- Add more list items as needed, adjusting the margin-bottom as desired -->
+          </ul>
+          <p class="text_Reg"><a id="moreNewsLink" href="#">More News...</a></p>
+          <p id="backLink" class="text_Reg" style="display: none;"><a href="?news=1">Back to homepage...</a></p>
+
+
+    </div>
+
+    <hr id="custom-divider1" class="custom-divider">
+
+    <h2 id="pub_head" class="section-header">Publications</h2>
+    <div id="papers">
+      <div class="publication-entry">
+        <div class="paper-img">
+        <div id="Fourth_Paper" class="inner_img" style="width: 110px; height: 80px; padding-left: 5px;">
+            <img class="dontInvert" src="https://mgemalma.github.io/mgemalma/Fourth_Paper/manager.webp" alt="Publication Image">
+        </div>
+        </div>
+        <div class="publication-text">
+            <h4 class="publication-title">
+              <!-- <a onmouseover="this.style.color='#007bff'; this.style.borderBottom='1px dotted transparent';" onmouseout="this.style.color='#333333'; this.style.borderBottom='1px dotted #333333';" style="text-decoration: none; color: #333333; border-bottom: 1px dotted #333333; transition: color 0.3s ease 0s, border-bottom 0.3s ease 0s;" class="pub_text">An Investigation of Decision Subjects' Interaction with and Perceived Fairness of Daily Updated AI Managers</a> -->
+              <a  style="text-decoration: none; color: #333333;" class="pub_text">An Investigation of Decision Subjects' Interaction with and Perceived Fairness of Daily Updated AI Managers</a>
+
+            </h4>
+            <p>Meric Altug Gemalmaz and Ming Yin<br> <i>(Coming Soon!!)</i>
+
+            </p>
+            <div class = "buttons" style="padding-top: 3px;">
+            <!-- <a href="" id="downloadButton" class="download-button" target="_blank">arXiv preprint</a> -->
+              </div>
+
+          </div>
+    </div>
+      <div class="publication-entry">
+          <div class="paper-img">
+          <div id="Third_Paper" class="inner_img" style="width: 110px; height: 80px; padding-left: 5px;">
+              <img class="dontInvert" src="https://mgemalma.github.io/mgemalma/Third_Paper/improvement.webp" alt="Publication Image">
+          </div>
+          </div>
+          <div class="publication-text">
+              <h4 class="publication-title">
+                <a onmouseover="this.style.color='#007bff'; this.style.borderBottom='1px dotted transparent';" onmouseout="this.style.color='#333333'; this.style.borderBottom='1px dotted #333333';" style="text-decoration: none; color: #333333; border-bottom: 1px dotted #333333; transition: color 0.3s ease 0s, border-bottom 0.3s ease 0s;" class="pub_text" href="https://mgemalma.github.io/mgemalma/Third_Paper/improvement.pdf">Understanding Decision Subjects' Engagement with and Perceived Fairness of AI Models When Opportunities of Qualification Improvement Exist</a>
+              </h4>
+              <p>Meric Altug Gemalmaz and Ming Yin<br> <i>(Under Review)</i>
+
+              </p>
+              <div class = "buttons" style="padding-top: 3px;">
+              <a id="downloadButton" class="download-button" target="_blank" href="https://mgemalma.github.io/mgemalma/Third_Paper/improvement.pdf">arXiv preprint</a>
+              <!-- <a id="downloadButton" class="download-button" style="pointer-events: none; opacity: 0.5; cursor: not-allowed;">arXiv preprint</a> -->
+                </div>
+
+            </div>
+      </div>
+
+    <div class="publication-entry">
+        <div class="paper-img">
+            <div id="AIES_IMAGE" class="inner_img" style="width: 110px; height: 90px; padding-left: 5px;">
+            <img class="dontInvert" src="https://mgemalma.github.io/mgemalma/AIES/fairness.png" alt="Publication Image">
+        </div>
+        </div>
+        <div class="publication-text">
+            <h4 class="publication-title">
+              <a onmouseover="this.style.color='#007bff'; this.style.borderBottom='1px dotted transparent';" onmouseout="this.style.color='#333333'; this.style.borderBottom='1px dotted #333333';" style="text-decoration: none; color: #333333; border-bottom: 1px dotted #333333; transition: color 0.3s ease 0s, border-bottom 0.3s ease 0s;" class="pub_text" href="https://mgemalma.github.io/mgemalma/AIES/fairness.pdf">Understanding Decision Subjects' Fairness Perceptions and Retention in Repeated Interactions with AI-Based Decision Systems</a>
+            </h4>
+            <p>Meric Altug Gemalmaz and Ming Yin<br> The 5th AAAI/ACM Conference on AI, Ethics, and Society (AIES), Oxford, UK, August 2022.</p>
+            <div class = "buttons" style="padding-top: 3px;">
+            <a href="https://mgemalma.github.io/mgemalma/AIES/AIES_presentation.pdf" id="downloadButton" class="download-button" target="_blank">slides</a>
+            <a href="https://youtu.be/iwBeY_79Q0U" id="downloadButton" class="download-button" target="_blank">video</a>
+          </div>
+          </div>
+    </div>
+
+    <div class="publication-entry">
+        <div class="paper-img">
+        <div id="IJCAI_IMAGE" class="inner_img" style="width: 110px; height: 80px; padding-left: 5px;">
+            <img class="dontInvert" src="https://mgemalma.github.io/mgemalma/IJCAI/confirmationBias.png" alt="Publication Image">
+        </div>
+        </div>
+        <div class="publication-text">
+            <h4 class="publication-title">
+              <a onmouseover="this.style.color='#007bff'; this.style.borderBottom='1px dotted transparent';" onmouseout="this.style.color='#333333'; this.style.borderBottom='1px dotted #333333';" style="text-decoration: none; color: #333333; border-bottom: 1px dotted #333333; transition: color 0.3s ease 0s, border-bottom 0.3s ease 0s;" class="pub_text" href="https://mgemalma.github.io/mgemalma/IJCAI/confirmationBias.pdf">Accounting for Confirmation Bias in Crowdsourced Label Aggregation</a>
+            </h4>
+            <p>Meric Altug Gemalmaz and Ming Yin<br> The 30th International Joint Conference on Artificial Intelligence (IJCAI), Online, August 2021.
+
+            </p>
+            <div class = "buttons" style="padding-top: 3px;">
+            <a href="https://mgemalma.github.io/mgemalma/IJCAI/IJCAI_slides_2mins.pdf" id="downloadButton" class="download-button" target="_blank">slides (2 mins)</a>
+            <a href="https://mgemalma.github.io/mgemalma/IJCAI/IJCAI_slides_15mins.pdf" id="downloadButton" class="download-button" target="_blank">slides (15 mins)</a>
+            <a href="https://ijcai-21.org/videos-slides/?video=2125" id="downloadButton" class="download-button" target="_blank">video</a>
+            <a href="https://mgemalma.github.io/mgemalma/IJCAI/IJCAI_Poster.pdf" id="downloadButton" class="download-button" target="_blank">poster</a>
+              </div>
+
+          </div>
+    </div>
+</div>
+
+
+    <div class="cv-section" id="cv-right" style="display: none;">
+  <!-- Removed <br> tags as they force a new line -->
+<div class="container1">
+
+      <!-- <div id="element1" style="width: 180px; padding-top: 9px;"> -->
+        <!-- <a href="https://mgemalma.github.io/mgemalma/CV/Meric_Altug_Gemalmaz_CV.pdf" target="_blank" style="margin-bottom: -2px;"> -->
+            <!-- <img class="cv-icon" style="width: 60px;" src="https://mgemalma.github.io/mgemalma/Assets/cv_icon.png" alt="CV Icon"> -->
+            <!-- <div style="width: 60px; height: 60px;" class="cv-icon"></div> -->
+        <!-- </a> -->
+        <!-- <div class="cv-info" style="margin-top: 0px; text-align: center;"> -->
+
+          <!-- Button for CV in mobile view -->
+    <!-- <div style="margin-bottom: 15px;">
+      <a href="https://mgemalma.github.io/mgemalma/CV/Meric_Altug_Gemalmaz_CV.pdf" class="cv-info1" target="_blank">
+        <button class="cv-btn cv-btn-cv">
+          <i class="fas fa-file-alt"></i> Curriculum Vitae
+          <i class="fas fa-download"></i>
+        </button>
+      </a>
+    </div> -->
+
+    <!-- Button for Résumé in mobile view -->
+    <!-- <div style="margin-bottom: 15px;">
+      <a href="https://mgemalma.github.io/mgemalma/Resume/Meric_Altug_Gemalmaz_Resume.pdf" class="cv-info1" target="_blank">
+        <button class="cv-btn cv-btn-resume">
+          <i class="fas fa-file"></i> Résumé
+          <i class="fas fa-download"></i>
+        </button>
+      </a>
+    </div> -->
+
+      <!-- </div> -->
+
+
+    <!-- </div> -->
+    <div id="element2" class="dontInvert" style="width: 200px; display:none">
+        <div id="visitDetailsContainer" style="width: 200px;">
+            <a id="visitDetailsLink" href="https://clustrmaps.com/site/1bz9i" title="Visit tracker" target="_blank" style="text-decoration: none; cursor: pointer;">
+                <img class="dontInvert" src="https://clustrmaps.com/map_v2.png?cl=ffffff&w=a&t=tt&d=nL-HVJLMlpqUfubT3FUj26AonS0xAPEZjn9O3Tf9pPE&co=9b9b9b" alt="Visit Tracker" style="width: 180px; height: 100px; cursor: pointer;">
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Copyright Notice -->
+<p class="fancy-copyright">
+    Meric Altug Gemalmaz © 2024
+</p>
+        </div>
+  </div>
+</div>
+
+<script>
+
+
+  // // Define a global variable for the updated date
+  // var lastUpdatedDate = "Oct 4, 2024"; // You can set this to any desired value
+
+  // // Function to update the text of the elements
+  // function updateText() {
+  //   // Update the element with the class "cv-text"
+  //   var cvTextElements = document.getElementsByClassName("cv-text");
+  //   for (var i = 0; i < cvTextElements.length; i++) {
+  //     cvTextElements[i].textContent = "(Last Updated: " + lastUpdatedDate + ")";
+  //   }
+
+  //   // Update the element with the id "footnote_cv"
+  //   document.getElementById("footnote_cv").textContent = "(Last Updated: " + lastUpdatedDate + ")";
+  // }
+
+  // // Call the function to immediately update the text on page load
+  // updateText();
+
+
+
+// document.getElementById('moreNewsLink').addEventListener('click', function() {
+//     // Hide sections with display: none
+//     document.querySelector('.about-me').style.display = 'none';
+//     document.querySelectorAll('.publication-entry').forEach(entry => entry.style.display = 'none');
+//     // Make custom dividers invisible without altering layout
+//     document.querySelectorAll('.custom-divider').forEach(divider => divider.style.visibility = 'hidden');
+//     document.querySelectorAll('.section-header').forEach((header, index) => {
+//         if (index != 1) header.style.display = 'none';
+//     });
+//     document.querySelector('#moreNewsLink').style.display = 'none';
+//     document.querySelector('#backLink').style.display = 'block';
+//     // Show all news items, assuming full news section is handled differently
+// });
+
+gup = function(path, name){
+    var regexS = "[\\?&]"+name+"=([^&#]*)";
+    var regex = new RegExp( regexS );
+    var results = regex.exec(path);
+    if( results == null )
+      return "";
+    else
+      return results[1];
+ }
+
+const animateCSS = (element, animation, dark, go, duration, delay, prefix = 'animate__') =>
+  // We create a Promise and return it
+  new Promise((resolve, reject) => {
+    const animationName = `${prefix}${animation}`;
+    const node = document.querySelector(element);
+    if (dark && go) {
+      node.classList.add('delayed-mix-blend');
+    }
+
+    if (node == null)
+    {
+      return;
+    }
+    // Add custom animation duration and delay
+    node.style.animationDuration = duration;
+    node.style.animationDelay = delay;
+
+    node.classList.add(`${prefix}animated`, animationName);
+
+    // When the animation ends, we clean the classes and resolve the Promise
+    function handleAnimationEnd(event) {
+      // Remove the custom animation duration and delay
+      node.style.animationDuration = '';
+      node.style.animationDelay = '';
+
+      event.stopPropagation();
+      node.classList.remove(`${prefix}animated`, animationName);
+      resolve('Animation ended');
+
+      if (dark && go) {
+        node.classList.remove('delayed-mix-blend');
+      }
+    }
+
+    node.addEventListener('animationend', handleAnimationEnd, {once: true});
+  });
+
+
+function preloadImage(url) {
+    return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.onload = () => {
+            resolve(img);
+        };
+        img.onerror = (error) => {
+            reject(error);
+        };
+        img.src = url;
+    });
+}
+
+const options = {
+  bottom: '32px', // default: '32px'
+  right: '32px', // default: '32px'
+  left: 'unset', // default: 'unset'
+  time: '0.0s', // default: '0.3s'
+  mixColor: '#fff', // default: '#fff'
+  backgroundColor: '#fff',  // default: '#fff'
+  buttonColorDark: '#100f2c',  // default: '#100f2c'
+  buttonColorLight: '#fff', // default: '#fff'
+  saveInCookies: true, // default: true,
+  label: '🌓', // default: ''
+  autoMatchOsTheme: true // default: true
+}
+
+animFunc = function(dark)
+{
+
+ var path = window.location.href;
+  var news = gup(path, 'news');
+    if ( news != 1)
+    {
+  animateCSS('#headerTop', 'fadeInDown', dark, false,'0.5s', '0.0s' );
+  animateCSS('.profile-pic', 'fadeInDown', dark, true,'1s', '0.5s' );
+  animateCSS('.title', 'fadeInDown', dark, false ,'1s', '0.5s');
+  animateCSS('.subtitle', 'fadeInDown', dark, false ,'1s', '0.5s');
+  animateCSS('#cv-right-new', 'fadeInDown', dark, false ,'1s', '0.5s');
+  animateCSS('#cv1', 'fadeInDown', dark, false ,'1s', '0.8s');
+  animateCSS('#cv2', 'fadeInDown', dark, false ,'1s', '0.8s');
+  animateCSS('#firstMap', 'fadeInDown', dark, false ,'1s', '0.8s');
+  animateCSS('.ab_hed', 'fadeInDown', dark, false ,'0.5s', '1.0s');
+  animateCSS('.about-me', 'fadeInDown', dark, false ,'1.0s', '1.0s');
+  animateCSS('.custom-divider', 'fadeInDown', dark, false ,'0.5s', '1.1s');
+  animateCSS('#news_header', 'fadeInDown', dark, false ,'0.5s', '1.2s');
+  animateCSS('#news_list', 'fadeInDown', dark, false ,'0.5s', '1.3s');
+  animateCSS('#custom-divider1', 'fadeInDown', dark, false ,'0.5s', '1.4s');
+  animateCSS('#pub_head', 'fadeInDown', dark, false ,'0.5s', '1.5s');
+  animateCSS('#papers', 'fadeInDown', dark, false ,'0.5s', '1.6s');
+  animateCSS('#element1', 'fadeInDown', dark, false ,'0.5s', '1.7s');
+  animateCSS('#element2', 'fadeInDown', dark, true ,'0.5s', '1.8s');
+  animateCSS('.fancy-copyright', 'fadeInDown', dark, false ,'0.5s', '1.8s');
+} else
+{
+  animateCSS('.ab_hed', 'fadeInDown', dark, false ,'0.5s', '0.0s');
+  animateCSS('.about-me', 'fadeInDown', dark, false ,'1.0s', '0.0s');
+  animateCSS('.custom-divider', 'fadeInDown', dark, false ,'0.5s', '0.1s');
+  animateCSS('#news_header', 'fadeInDown', dark, false ,'0.5s', '0.2s');
+  animateCSS('#news_list', 'fadeInDown', dark, false ,'0.5s', '0.3s');
+  animateCSS('#custom-divider1', 'fadeInDown', dark, false ,'0.5s', '0.4s');
+  animateCSS('#pub_head', 'fadeInDown', dark, false ,'0.5s', '0.5s');
+  animateCSS('#papers', 'fadeInDown', dark, false ,'0.5s', '0.6s');
+  animateCSS('#element1', 'fadeInDown', dark, false ,'0.5s', '0.7s');
+  animateCSS('#element2', 'fadeInDown', dark, true ,'0.5s', '0.8s');
+  animateCSS('.fancy-copyright', 'fadeInDown', dark, false ,'0.5s', '0.8s');
+}
+
+ if (news == 1) {
+  history.pushState({}, document.title, window.location.pathname);
+ }
+  // Wait for 5 seconds
+setTimeout(() => {
+  // Select all elements that have a class attribute
+  const allElements = document.querySelectorAll('[class]');
+
+  // Iterate through the selected elements
+  allElements.forEach(el => {
+    // Split class names and filter out those starting with 'animate__'
+    const newClassNames = el.className.split(' ').filter(className => !className.startsWith('animate__')).join(' ');
+    el.className = newClassNames;
+
+    // Remove specific inline styles if they exist
+    const style = el.getAttribute('style');
+    if (style) {
+      let newStyle = style.replace(/animation-duration: [^;]+;/g, '').replace(/animation-delay: [^;]+;/g, '').trim();
+      // If there's nothing left after removal, remove the style attribute altogether
+      if (newStyle === '') {
+        el.removeAttribute('style');
+      } else {
+        el.setAttribute('style', newStyle);
+      }
+    }
+  });
+}, 2000);
+
+
+}
+
+const darkmode = new Darkmode(options);
+
+function addDarkmodeWidget() {
+  darkmode.showWidget();
+}
+
+function temporarilyDisableDarkModeToggleButton() {
+  // Find all buttons on the page
+  const buttons = document.getElementsByTagName('button');
+
+  // Iterate over the buttons to find the one with the classname containing 'darkmode-toggle'
+  for (const button of buttons) {
+    if (button.className.includes('darkmode-toggle')) {
+      // Disable the button
+      button.disabled = true;
+
+      // Set a timeout to re-enable the button after 3 seconds
+      setTimeout(() => {
+        button.disabled = false;
+      }, 3000);
+
+      break; // Stop the loop if the button is found
+    }
+  }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+
+  const imageUrl = 'https://mgemalma.github.io/mgemalma/Assets/cv_icon.png';
+  const imageUrlHover = 'https://mgemalma.github.io/mgemalma/Assets/cv_icon_1.png';
+
+  preloadImage(imageUrl).then(() => {
+      // console.log('Image preloaded:', imageUrl);
+  });
+
+  preloadImage(imageUrlHover).then(() => {
+      // console.log('Image preloaded:', imageUrlHover);
+  });
+
+
+    // Initially show only the first three news items
+    let newsItems = document.querySelectorAll('.News li');
+    for (let i = 3; i < newsItems.length; i++) {
+        newsItems[i].style.display = 'none';
+    }
+
+    // Show all news items when 'More News...' is clicked
+    document.getElementById('moreNewsLink').addEventListener('click', function(e) {
+        e.preventDefault(); // Prevent the default anchor action
+        for (let i = 0; i < newsItems.length; i++) {
+            newsItems[i].style.display = 'list-item';
+        }
+        document.getElementById('backLink').style.display = 'block'; // Show the back link
+        this.style.display = 'none'; // Hide the 'More News...' link
+
+        document.querySelector('.about-me').style.display = 'none';
+        document.querySelectorAll('.publication-entry').forEach(entry => entry.style.display = 'none');
+        // Make custom dividers invisible without altering layout
+        document.querySelectorAll('.custom-divider').forEach(divider => divider.remove());
+        document.querySelectorAll('.section-header').forEach((header, index) => {
+            if (index != 1) header.style.display = 'none';
+        });
+        document.querySelector('#moreNewsLink').style.display = 'none';
+        document.querySelector('#backLink').style.display = 'block';
+
+        window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // Optional: for smooth scrolling
+    });
+    var dark = darkmode.isActivated();
+    animateCSS('#news_header', 'fadeInDown', dark, false ,'0.5s', '0s');
+    animateCSS('#news_list', 'fadeInDown', dark, false ,'0.5s', '0s');
+    });
+
+
+
+    // // Optionally, handle the 'Back' link click to show only the first three again
+    // document.getElementById('backLink').addEventListener('click', function(e) {
+    //     e.preventDefault(); // Prevent the default anchor action
+    //     for (let i = 3; i < newsItems.length; i++) {
+    //         newsItems[i].style.display = 'none';
+    //     }
+    //     document.getElementById('moreNewsLink').style.display = 'block'; // Show the 'More News...' link again
+    //     this.style.display = 'none'; // Hide the 'Back' link
+    // });
+    // Find the button with the class 'darkmode-toggle'
+    var darkmodeToggleButtons = document.querySelectorAll('button');
+
+// Iterate over each button
+darkmodeToggleButtons.forEach(function(button) {
+    button.addEventListener('click', function() {
+        // Check the current class list of the button
+        if (this.classList.contains('darkmode-toggle--white')) {
+
+                  document.querySelectorAll('.dontInvert').forEach((element) => {
+                      element.classList.remove('delayed-mix-blend');
+                  });
+
+
+        } else {
+          if (this.classList.contains('darkmode-toggle')) {
+
+                  document.querySelectorAll('.dontInvert').forEach((element) => {
+                      element.classList.add('delayed-mix-blend');
+                  });
+
+            }
+        }
+    });
+});
+
+
+// animateCSS('#news_list', 'fadeInDown');
+
+});
+
+window.addEventListener('load', addDarkmodeWidget);
+
+if (darkmode.isActivated()){
+
+animFunc(true);
+
+
+} else
+{
+animFunc(false)
+}
+
+
+
+if (darkmode.isActivated()){
+      document.querySelectorAll('.dontInvert').forEach((element) => {
+                      element.classList.add('delayed-mix-blend');
+                  });
+
+            }
+
+
+preloadImage("https://mgemalma.github.io/mgemalma/Assets/profile_picture.JPG").then(() => {
+      // console.log('Image preloaded:', imageUrlHover);
+  });
+
+
+  setInterval(function() {
+  if (darkmode.isActivated()) {
+    document.querySelectorAll('.dontInvert').forEach((element) => {
+      // Only add the class if it doesn't already exist
+      if (!element.classList.contains('delayed-mix-blend')) {
+        element.classList.add('delayed-mix-blend');
+      }
+      // Check if the isolation property is set and remove it
+      if (element.style.isolation === 'isolate') {
+        element.style.removeProperty('isolation');
+      }
+    });
+  } else {
+    // Process elements with the .dontInvert class
+    document.querySelectorAll('.dontInvert').forEach((element) => {
+      // Only remove the class if it exists
+      if (element.classList.contains('delayed-mix-blend')) {
+        element.classList.remove('delayed-mix-blend');
+      }
+      // Also remove the isolation style if present
+      if (element.style.isolation === 'isolate') {
+        element.style.removeProperty('isolation');
+      }
+    });
+
+    // New general check for all elements with the 'delayed-mix-blend' class
+    document.querySelectorAll('.delayed-mix-blend').forEach((element) => {
+      element.classList.remove('delayed-mix-blend');
+      // Optionally, check and remove the isolation style if present
+      if (element.style.isolation === 'isolate') {
+        element.style.removeProperty('isolation');
+      }
+    });
+  }
+}, 500);
+
+
+temporarilyDisableDarkModeToggleButton();
+
+
+    </script>
+</body>
+</html>
